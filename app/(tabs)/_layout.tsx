@@ -11,7 +11,7 @@ export default function TabLayout() {
             backgroundColor: '#25292e',
         },
         headerShadowVisible: false,
-        headerTintColor: '#fff',
+        headerTintColor: '#aff',
         tabBarStyle: {
             backgroundColor: '#25292e',
         },
@@ -26,6 +26,27 @@ export default function TabLayout() {
                 ),
             }} 
         />
+      <Tabs.Screen
+            name="login"
+            options={{
+                title: "Login",
+                tabBarIcon: ({color}) => (<Ionicons name='log-in'  size={24} color={color}/>),               
+            }}   
+      />
+      <Tabs.Screen 
+            name="settings"
+            options={{
+                title: 'Settings',
+                tabBarIcon: ({color}) => <Ionicons name='settings' size={24} color={color} />
+            }}
+      />
+      <Tabs.Screen 
+            name="search" 
+            options={{
+                title:'Search',
+                tabBarIcon: ({color}) => <Ionicons name='search' size={24} color={color} />
+            }}
+      />  
       <Tabs.Screen 
             name="about" 
             options={{ 

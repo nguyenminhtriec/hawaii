@@ -39,18 +39,15 @@ export default function Index() {
     });
 
     if (!result.canceled) {
-      console.log(result);
+      // console.log(result);
       setShowAppOptions(true);
       setSelectedImage(result.assets[0].uri);
     } else {
       alert('You did not select any image.');
     }
   };
-
   const onReset = () => { setShowAppOptions(false); };
-  const onAddSticker = () => {
-    setIsModalVisible(true);
-  }
+  const onAddSticker = () => { setIsModalVisible(true); }
   const onModalClose = () => { setIsModalVisible(false); };
 
   const onSaveImageAsync = async () => {
