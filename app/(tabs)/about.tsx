@@ -1,7 +1,7 @@
 
-import {View, StyleSheet, Pressable, Text, Button, FlatList, Image, TextInput, TargetedEvent} from 'react-native';
-import { useState, useEffect} from 'react';
-import DateTimePicker from '@react-native-community/datetimepicker';
+import {View, StyleSheet, Text, FlatList, Image, } from 'react-native';
+import { useState } from 'react';
+
 import { WebDatePicker, NativeDatePicker } from '@/components/MyDatePicker';
 import { Platform } from 'react-native';
 import { Link } from 'expo-router';
