@@ -1,7 +1,7 @@
    
     export async function POST(req: Request) {
 
-        const API_KEY = process.env.MARS_API_KEY || ''; //'MHEPfWZVJ9JrMMGRuGH9knnYvN3b2DFqcax9YVAS'; // 
+        const API_KEY = process.env.MARS_API_KEY || ''; 
 
         const {earthDate} = await req.json();
         
