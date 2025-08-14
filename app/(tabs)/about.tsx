@@ -10,16 +10,13 @@ type MarsPhoto = {'id': string, 'img_src': string};
 
 export default function MarsPhotos() {
 
-    // const url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=201-09-30&api_key=DEMO_KEY';
-    // const baseUrl = 'https://android-kotlin-fun-mars-server.appspot.com/photos';
-
     const [earthDate, setEarthDate] = useState<string>("");
     const [photos, setPhotos] = useState<MarsPhoto[]>([]);
     const [show, setShow] = useState(true);
     
     console.log("Earth date:", earthDate);
     const fetchPhotos = async () => {       
-        const response = await fetch("/mars", {  
+        const response = await fetch("/mars/mars", {  
             cache: 'force-cache',         
             method: "POST",
             headers: {"Content-Type": "application/json"},
@@ -58,8 +55,7 @@ export default function MarsPhotos() {
                 keyExtractor={(photo) => photo.id}
                 renderItem= {({item}) => (
                     <View style={{backgroundColor: 'lightblue', padding: 4}}>
-                        <Text style={{top: 0, left: 0, zIndex: 100}}>{item.id}</Text>
-                        
+                        <Text style={{top: 0, left: 0, zIndex: 100}}>{item.id}</Text>                       
                         <Link push href={{
                                 pathname:'/mars/[id]', 
                                 params: {id: item.id, img_src: item.img_src}
